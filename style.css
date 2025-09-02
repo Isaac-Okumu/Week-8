@@ -1,0 +1,276 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   GOOGLE FONTS
+========================= */
+/* Make sure to include this in your HTML <head>:
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+*/
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+body {
+  font-family: 'Roboto', Arial, sans-serif; /* updated font */
+  line-height: 1.6;
+  background: #fafafa;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; /* headings font */
+  font-weight: 600;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* =========================
+   HEADER & NAVBAR
+========================= */
+header {
+  background: #222;
+  color: #fff;
+  padding: 15px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: #00bcd4;
+  color: #fff;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #00bcd4, #0097a7);
+  color: #fff;
+}
+
+.hero h2 {
+  font-family: 'Poppins', sans-serif; /* heading font */
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-family: 'Roboto', sans-serif; /* body font */
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+/* =========================
+   IMAGE SLIDER
+========================= */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.slide {
+  display: none;
+  width: 100%;
+}
+
+.slide.active {
+  display: block;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* =========================
+   PROFILE SECTION
+========================= */
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.profile-card {
+  text-align: center;
+  max-width: 400px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px; /* subtle rounding */
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.profile-card h2 {
+  margin: 10px 0;
+  color: #333;
+  font-family: 'Poppins', sans-serif; /* heading font */
+}
+
+.profile-card p {
+  color: #555;
+  font-size: 16px;
+  margin: 5px 0;
+  font-family: 'Roboto', sans-serif; /* body font */
+}
+
+.profile-card .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.profile-card .btn:hover {
+  background: #555;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form input,
+form textarea,
+form button {
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif; /* input font */
+}
+
+form textarea {
+  resize: none;
+}
+
+form button {
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+form button:hover {
+  background: #0097a7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
